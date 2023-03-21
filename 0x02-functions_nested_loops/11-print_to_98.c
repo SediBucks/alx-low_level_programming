@@ -3,8 +3,8 @@
 
 /**
 * print_to_98 - print natural numbers
- * @n: value 
-* Return: Always 0. 
+ * @n: value
+* Return: Always 0.
  */
 void print_to_98(int n)
 {
