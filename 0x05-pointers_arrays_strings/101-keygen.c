@@ -9,22 +9,18 @@
 
 int main(void)
 {
-char password[PASSWORD_LENGTH + 1];
-int i, rand_num;
-srand(time(NULL));
+    char password[PASSWORD_LENGTH + 1];  // add one to include null terminator
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=";
 
- for (i = 0; i < PASSWORD_LENGTH; i++) {
-        rand_num = rand() % 62; 
-        if (rand_num < 26) {
-            password[i] = 'a' + rand_num;         } else if (rand_num < 52) {
-            password[i] = 'A' + rand_num - 26;s
-        } else {
-            password[i] = '0' + rand_num - 52;
-        }
+    srand(time(NULL));
+
+    for (int i = 0; i < PASSWORD_LENGTH; i++) {
+        password[i] = charset[rand() % sizeof(charset)];
     }
+
     password[PASSWORD_LENGTH] = '\0';
-    
-    // print the password
-    printf("%s\n", password);
-    
+
+    printf("Random Password: %s\n", password);
+
     return 0;
+}
