@@ -7,6 +7,8 @@
  * Return: Always 0.
  */
 
+#define PASSWORD_LENGTH 12
+
 int main(void)
 {
     char password[PASSWORD_LENGTH + 1];  // add one to include null terminator
