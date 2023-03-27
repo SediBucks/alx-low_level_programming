@@ -2,24 +2,29 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- * main -password.
- * Return: Always 0.
- */
+#define PASSWORD_LENGTH 10
 
 int main(void)
 {
-    char password[9]; 
-    const char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789";
-    srand(time(NULL)); 
+    int sum = 0, i = 0, random;
+    char password[PASSWORD_LENGTH + 1];
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=";
 
-    for (int i = 0; i < 8; i++) {
-        password[i] = charset[rand() % 36];
+    srand(time(NULL));
+
+    while (sum < PASSWORD_LENGTH) {
+        random = rand() % (sizeof(charset) - 1);
+        if (sum + random > PASSWORD_LENGTH) {
+            continue;
+        }
+        password[i] = charset[random];
+        i++;
+        sum += random;
     }
 
-    password[8] = '\0'; 
+    password[PASSWORD_LENGTH] = '\0';
 
-    printf("Random Password: %s\n", password);
+    printf("Generated Password: %s\n", password);
 
     return 0;
 }
