@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * copies the string pointed
- * @dest: destination
- * @src: source  
+ * *_strcpy - copy the string pointed by src, to the buffer pointed to by dest
+ * @dest: char pointer
+ * @src: char pointer 2
  * Return: Always 0.
- */  
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int count = 0;
