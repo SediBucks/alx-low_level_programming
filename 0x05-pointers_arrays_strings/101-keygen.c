@@ -26,6 +26,11 @@ int main(void)
 
     printf("Generated Password: %s\n", password);
 
+     if (strcmp(password, "Tada! Congrats") == 0) {
+        printf("Success!\n");
+    } else {
+        printf("Wrong password\n");
+    }
+
     return 0;
 }
-
