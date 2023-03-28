@@ -2,27 +2,58 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LENGTH 8 // password length
-#define CHARS 
-"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};':\"\\|,.<>/?`~" 
-
 /**
  * main -password.
  * Return: Always 0.
  */
 
-
 int main() {
-    srand(time(NULL)); 
 
-    char password[LENGTH + 1];
+char numbers[] = "0123456789";
+char letter[] = "abcdefghijklmnoqprstuvwyzx";
+char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+char symbols[] = "!@#$^&*?";
 
-    for (int i = 0; i < LENGTH; i++) {
-        password[i] = CHARS[rand() % (sizeof(CHARS) - 1)];
+int size;
+scanf("%d",&size);
+
+char password[20];
+
+srand((unsigned int)(time(NULL)));
+
+for(int i=0; i<size; i++ )
+{
+    int random_number = rand()%4;
+
+    if(random_number == 0)
+    {
+
+random_number = rand()%10;
+
+password[i] = numbers[random_number];
     }
+    else if(random_number == 1)
+    {
+random_number = rand()%26;
 
-    password[LENGTH] = '\0';
+        password[i] = letter[random_number];
+    }
+    else if(random_number == 2)
+    {
+random_number = rand()%26;
 
-    printf("Password: %s\n", password);
-    return 0;
+        password[i] = LETTER[random_number];
+    }
+    else
+    {
+ random_number = rand()%8;
+
+        password[i] = symbols[random_number];
+    }
+}
+for(int i=0;i<size;i++)
+    {
+      printf("%c", password[i]);
+    }
+  return 0;
 }
