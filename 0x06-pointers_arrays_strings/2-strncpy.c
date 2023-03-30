@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _strncat - concatenates two strings,
- * @dest: destination.
- * @src: source.
- * @n: amount of bytes used from src.
- * Return: always0.
+ * _strncpy - copies a string
+ * @dest: vslue
+ * @src: value
+ * @n: value
+ * Return: Always 0.
  */
 
 char *_strncpy(char *dest, char *src, int n)
