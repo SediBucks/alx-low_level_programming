@@ -3,7 +3,7 @@
 /**
  * rev_string - reverse array
  * @n: integer params
- * Return: Always 0.
+ * Return: 0
  */
 
 void rev_string(char *n)
@@ -28,11 +28,11 @@ void rev_string(char *n)
 
 /**
  * infinite_add - add 2 numbers together
- * @n1: No. 1
- * @n2: No. 2
+ * @n1: text representation of 1st number
+ * @n2: text representation of 2nd number
  * @r: pointer to buffer
  * @size_r: buffer size
- * Return: Always 0.
+ * Return: pointer to calling function
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
