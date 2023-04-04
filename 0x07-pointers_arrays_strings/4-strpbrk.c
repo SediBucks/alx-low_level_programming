@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * _strpbrk - Write a function that searches a string for any of a set of bytes.
- * @s: string for first occurance
- * @accept: match a byte
- * Return: Always 0.
+ * _strpbrk - function that searches a string for any of a set of bytes
+ * @s: first occurrence in the string
+ * @accept: matches one of the bytes
+ * Return: a pointer to the byte
  */
-
 char *_strpbrk(char *s, char *accept)
 {
 	int i;
