@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strchr - locates a character in a string.
- * @s:  string to be scanned
- * @accept: character to be searched in s
- * Return: always 0.
+ * _strspn - a function that gets the length of a prefix substring
+ * @s: the initial segment of
+ * @accept: which consists only of bytes from
+ * Return: the number of bytes
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	int z = 0, x, y;
