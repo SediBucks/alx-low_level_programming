@@ -6,25 +6,23 @@
  * @accept: character to be searched in s
  * Return: always 0.
  */
-unsigned int _strspn(char *s, char *accept);
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-	int i, j;
+	int z = 0, x, y;
 
-	for (i = 0; s[i]; i++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		for (j = 0; accept[j]; j++)
+		if (s[x] != 32)
 		{
-			if (s[i] == accept[j])
+			for (y = 0; accept[y] != '\0'; y++)
 			{
-				count++;
-				break;
+				if (s[x] == accept[y])
+					z++;
 			}
 		}
-
-		if (!accept[j])
-			break;
+		else
+			return (z);
 	}
+		return (z);
 
-	return count;
 }
