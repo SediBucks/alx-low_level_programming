@@ -11,8 +11,8 @@
 		if (y * y == x)
 			return (y);
 		if (y * y < x)
-			return (-1);
 			return (_sedi(x, y + 1));
+return (-1);
 }
 
 /**
