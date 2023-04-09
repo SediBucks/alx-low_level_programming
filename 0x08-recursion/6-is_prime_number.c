@@ -8,11 +8,11 @@
  */
 int sedi(int x, int y)
 {
-        if (x == y)
-                return (1);
-        if (x % y == 0)
-                return (0);
-        return (sedi(x, y + 1));
+	if (x == y)
+		return (1);
+	if (x % y == 0)
+		return (0);
+	return (sedi(x, y + 1));
 }
 
 /**
@@ -22,7 +22,7 @@ int sedi(int x, int y)
  */
 int is_prime_number(int n)
 {
-        if (n <= 1)
-                return (0);
-        return (sedi(n, 2));
+	if (n <= 1)
+		return (0);
+	return (sedi(n, 2));
 }
