@@ -1,30 +1,28 @@
 #include "main.h"
 
 /**
- * is_prime_number - returns 1 if the input integer is a prime number, otherwise return 0.
- * @n: value
- * Return: Always 0.
+ * sedi - checks if a number is prime
+ * @x: number
+ * @y: the divisor to check
+ * Return: 1 if x is prime, 0 otherwise
  */
-
-int is_prime_number(int n)
+int sedi(int x, int y)
 {
-	if (n <= 1)
-		return (0);
-		return (sedi(n, 2));
+        if (x == y)
+                return (1);
+        if (x % y == 0)
+                return (0);
+        return (sedi(x, y + 1));
 }
 
 /**
- * sedi - returns 1 if the input integer is a prime number, otherwise return 0.
- * @x: value
- * @y: variable
- * Return: Always 0.
+ * is_prime_number - checks if a number is prime
+ * @n: number
+ * Return: 1 if n is prime, 0 otherwise
  */
-
+int is_prime_number(int n)
 {
-	int sedi(int x, int y)
-			if (x == y)
-		return (1);
-	if (x % y == 0)
-		return (0);
-	return (sedi(x, y + 1));
+        if (n <= 1)
+                return (0);
+        return (sedi(n, 2));
 }
